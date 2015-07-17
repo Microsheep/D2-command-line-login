@@ -16,6 +16,7 @@ payload = {'magic': reply,'username': account_name+'@nctu.edu.tw', 'password': a
 ### post payload ###
 r = requests.post("http://www.google.com", data=payload)
 print("Payload sent! XD")
+print(r)
 ### check if success ###
 cres = requests.get("http://www.google.com")
 craw_data = BeautifulSoup(cres.text, "lxml")
