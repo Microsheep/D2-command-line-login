@@ -1,0 +1,9 @@
+('/home/micro/d2_login/standalone/build/login/login',
+ True,
+ False,
+ None,
+ None,
+ [],
+ None,
+ False,
+ 1437134709)
