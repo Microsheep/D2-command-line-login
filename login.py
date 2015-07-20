@@ -6,7 +6,7 @@ import getpass
 account_name=""
 account_password=""
 account_name = input("Enter username ___@nctu.edu.tw: ")
-account_name = getpass.getpass("Enter Password: ")
+account_password = getpass.getpass("Enter Password: ")
 ### get magic ###
 res = requests.get("http://www.google.com")
 raw_data = BeautifulSoup(res.text, "lxml")
@@ -20,8 +20,7 @@ print(r)
 ### check if success ###
 cres = requests.get("http://www.google.com")
 craw_data = BeautifulSoup(cres.text, "lxml")
-creply = raw_data.find_all('input')[0]["value"]
-if creply=="Big5":
+if str(craw_data).find("d2")==-1:
     print("Success!")
 else:
     print("Failed with unknown reason!")
